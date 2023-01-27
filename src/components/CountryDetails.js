@@ -9,10 +9,6 @@ const CountryDetails = (props) => {
   const [countryCode, setCountryCode] = useState("");
   const navigate = useNavigate();
 
-  const goBack = () => {
-    navigate(-1);
-  };
-
   if (redirect) {
     return <Navigate to={`/${name}/${countryCode}/`} />;
   }
@@ -22,7 +18,7 @@ const CountryDetails = (props) => {
         <div className="mt-10 mb-16 ml-10">
           <button
             className="bg-white dark:bg-[#2b3945] dark:text-white rounded-sm flex items-center gap-2 px-6 py-1 shadow-md hover:scale-105 duration-150"
-            onClick={goBack}
+            onClick={() => navigate(-2)}
           >
             <Icon icon="mdi:arrow-left-thin" className="text-2xl" />
             <p>Back</p>
