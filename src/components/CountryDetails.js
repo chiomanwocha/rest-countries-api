@@ -1,28 +1,17 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
-import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
 
 const CountryDetails = (props) => {
   const { name } = useParams();
-  const [redirect, setRedirect] = useState(false);
-  const [countryCode, setCountryCode] = useState("");
   const navigate = useNavigate();
 
-  const goBack = () => {
-    navigate(-1);
-  };
-
-  if (redirect) {
-    return <Navigate to={`/${name}/${countryCode}/`} />;
-  }
   return (
     <>
       <div>
         <div className="mt-10 mb-16 ml-10">
           <button
             className="bg-white dark:bg-[#2b3945] dark:text-white rounded-sm flex items-center gap-2 px-6 py-1 shadow-md hover:scale-105 duration-150"
-            onClick={goBack}
+            onClick={() => navigate(-1)}
           >
             <Icon icon="mdi:arrow-left-thin" className="text-2xl" />
             <p>Back</p>
@@ -97,13 +86,14 @@ const CountryDetails = (props) => {
                 </p>
               )}
               {props.borders?.map((country) => (
-                <p
-                  className="bg-white dark:bg-[#2b3945] duration-300 py-1 px-6 shadow-sm text-sm w-fit inline-block mr-2 mt-2 rounded-sm hover:scale-110 hover:shadow-md cursor-pointer"
-                  key={country}
-                  onClick={() => [setRedirect(true), setCountryCode(country)]}
-                >
-                  {country}
-                </p>
+                <a href={`/country/${name}/${country}`}>
+                  <p
+                    className="bg-white dark:bg-[#2b3945] duration-300 py-1 px-6 shadow-sm text-sm w-fit inline-block mr-2 mt-2 rounded-sm hover:scale-110 hover:shadow-md cursor-pointer"
+                    key={country}
+                  >
+                    {country}
+                  </p>
+                </a>
               ))}
             </div>
           </div>

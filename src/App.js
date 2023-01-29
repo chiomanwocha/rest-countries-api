@@ -21,12 +21,12 @@ function App() {
                 <Route exact path="/" element={<Home />}></Route>
                 <Route
                   exact
-                  path="/:name"
+                  path="/country/:name"
                   element={<MainCountryDetails />}
                 ></Route>
                 <Route
                   exact
-                  path="/:name/:countryCode"
+                  path="/country/:name/:countryCode"
                   element={<BorderDetails />}
                 ></Route>
               </Routes>
