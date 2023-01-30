@@ -40,7 +40,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="pt-20">
       <SearchBox handleOnChange={handleOnChange} handleInput={handleInput} />
       <CountryCards
         setData={setData}

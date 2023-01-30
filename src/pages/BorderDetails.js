@@ -11,6 +11,7 @@ const BorderDetails = () => {
   const [nativeName, setNativeName] = useState([]);
   const [countryDetails, setCountryDetails] = useState([]);
   const { countryCode } = useParams();
+  
   const getCountries = () => {
     return axios.get(
       `https://restcountries.com/v3.1/alpha?codes=${countryCode}`
@@ -27,7 +28,7 @@ const BorderDetails = () => {
   });
 
   return (
-    <>
+    <div>
       {status === "loading" || isFetching ? (
         <Loader />
       ) : (
@@ -46,7 +47,7 @@ const BorderDetails = () => {
           borders={countryDetails?.borders}
         />
       )}
-    </>
+    </div>
   );
 };
 

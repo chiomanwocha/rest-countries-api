@@ -1,9 +1,9 @@
 import axios from "axios";
-import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { useState } from "react";
 import Loader from "../components/Loader";
 import CountryDetails from "../components/CountryDetails";
+import { useParams } from "react-router-dom";
 
 const MainCountryDetails = () => {
   const { name } = useParams();
