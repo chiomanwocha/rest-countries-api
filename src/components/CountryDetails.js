@@ -6,7 +6,7 @@ const CountryDetails = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div className="absolute w-full dark:bg-[#1F2D36]">
+    <div className="absolute w-full dark:bg-[#1F2D36] bg-[#FAFAFA]">
       <div className="pb-10">
         <div className="mt-28 mb-16 ml-10">
           <button

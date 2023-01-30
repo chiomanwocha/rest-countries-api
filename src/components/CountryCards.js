@@ -24,7 +24,7 @@ const CountryCards = ({ isFetchedAfterMount, loading, error, data, query }) => (
             .map((data) => (
               <a href={`/country/${data?.name?.common}`} key={data?.name.common}>
                 <div
-                  className="bg-white border-[1px] dark:bg-[#2b3945] dark:text-white hover:rounded-none mt-10 md:w-fit cursor-pointer hover:scale-105 hover:shadow-xl duration-150 w-[60vw]"
+                  className="bg-white border-[1px] dark:bg-[#2b3945] dark:text-white hover:rounded-none mt-10 md:w-fit cursor-pointer hover:scale-105 hover:shadow-xl duration-150 lg:w-[60vw]"
                   key={data?.name.common}
                 >
                   <div className=" h-[200px] xl:w-[300px] lg:w-[450px] md:w-[320px] w-[100%] ">

@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 
 const SearchBox = ({ handleOnChange, handleInput }) => {
   return (
-    <div className="md:flex justify-between md:pt-14 md:pb-10 md:gap-10 px-10 duration-300">
+    <div className="md:flex justify-between md:pt-14 md:pb-10 md:gap-10 px-8 md:px-10 duration-300">
       <div className="flex  rounded-md items-center lg:w-[45vw] gap-4 mt-10 mb-6 md:mt-0 md:mb-0 dark:bg-[#2b3945]  bg-white shadow-md w-full shadow-gray-100 dark:shadow-gray-800 px-6 py-4 duration-300">
         <Icon
           icon="material-symbols:search-rounded"
