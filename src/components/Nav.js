@@ -30,8 +30,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className="fixed top-0 w-full bg-[#FAFAFA] dark:bg-[#1F2D36] z-50">
-      <nav className="flex justify-between px-6 py-8 shadow-md shadow-gray-100 duration-300 dark:bg-[#2b3945] dark:text-white dark:shadow-xl dark:shadow-gray-800">
+    <div className="fixed w-full bg-[#FAFAFA] dark:bg-[#1F2D36] z-50">
+      <nav className="flex justify-between px-6 py-8 shadow-md shadow-gray-100 dark:bg-[#2b3945] dark:text-white dark:shadow-xl dark:shadow-gray-800">
         <Link to="/">
           <div>
             <p className="font-bold">Where in the world?</p>

@@ -10,7 +10,7 @@ const CountryCards = ({ isFetchedAfterMount, loading, error, data, query }) => (
         <p className="font-bold text-center mt-10">
           {error?.response.data.message}
         </p>
-        <div className="grid xl:grid-cols-4 md:grid-cols-2 px-8 justify-items-center duration-300 dark:bg-[#1F2D36] bg-[#FAFAFA]">
+        <div className="grid pb-10 xl:grid-cols-4 md:grid-cols-2 px-8 justify-items-center dark:bg-[#1F2D36] bg-[#FAFAFA]">
           {data?.data
             .filter((post) => {
               if (query === "") {
@@ -24,7 +24,7 @@ const CountryCards = ({ isFetchedAfterMount, loading, error, data, query }) => (
             .map((data) => (
               <a href={`/country/${data?.name?.common}`} key={data?.name.common}>
                 <div
-                  className="bg-white border-[1px] dark:bg-[#2b3945] dark:text-white hover:rounded-none mt-10 md:w-fit cursor-pointer hover:scale-105 hover:shadow-xl duration-150 lg:w-[60vw]"
+                  className="bg-white border-[1px] dark:bg-[#2b3945] dark:text-white hover:rounded-none mt-10 w-100% md:w-fit cursor-pointer hover:scale-105 hover:shadow-xl lg:w-[60vw]"
                   key={data?.name.common}
                 >
                   <div className=" h-[200px] xl:w-[300px] lg:w-[450px] md:w-[320px] w-[100%] ">

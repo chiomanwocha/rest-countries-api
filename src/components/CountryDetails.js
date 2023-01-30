@@ -6,9 +6,9 @@ const CountryDetails = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div className="absolute w-full dark:bg-[#1F2D36] bg-[#FAFAFA]">
-      <div className="pb-10">
-        <div className="mt-28 mb-16 ml-10">
+    <div className="relative pt-8 w-full dark:bg-[#1F2D36] bg-[#FAFAFA] md:h-screen">
+      <div>
+        <div className="pt-28 md:pt-40 mb-16 ml-10 ">
           <button
             className="bg-white dark:bg-[#2b3945] dark:text-white rounded-sm flex items-center gap-2 px-6 py-1 shadow-md hover:scale-105 duration-150"
             onClick={() => navigate(-1)}
@@ -85,7 +85,7 @@ const CountryDetails = (props) => {
                   None
                 </p>
               )}
-              <div className="md:w-[35vw]">
+              <div className="md:w-[35vw] pb-10">
                 {props.borders?.map((country) => (
                   <a href={`/country/${name}/${country}`} key={country}>
                     <p
