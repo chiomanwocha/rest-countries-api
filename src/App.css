@@ -9,6 +9,14 @@
   pointer-events: none;
 }
 
+#align {
+  align-items: center;
+}
+
+#height {
+  min-height: 21vh
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

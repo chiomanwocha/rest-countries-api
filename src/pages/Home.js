@@ -24,15 +24,27 @@ const Home = () => {
   );
   const handleOnChange = (value) => {
     setLoading(true);
-    axios
-      .get(`https://restcountries.com/v3.1/region/${value}`)
-      .then((res) => {
-        setData(res);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => setLoading(false));
+    if (value === "all") {
+      axios
+        .get("https://restcountries.com/v3.1/all")
+        .then((res) => {
+          setData(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+        .finally(() => setLoading(false));
+    } else {
+      axios
+        .get(`https://restcountries.com/v3.1/region/${value}`)
+        .then((res) => {
+          setData(res);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => setLoading(false));
+    }
   };
 
   const handleInput = (value) => {

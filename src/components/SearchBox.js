@@ -32,6 +32,7 @@ const SearchBox = ({ handleOnChange, handleInput }) => {
         <option value="asia">Asia</option>
         <option value="europe">Europe</option>
         <option value="oceania">Oceania</option>
+        <option value="all">All</option>
       </select>
     </div>
   );

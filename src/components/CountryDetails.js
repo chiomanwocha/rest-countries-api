@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
+import "../App.css";
 
 const CountryDetails = (props) => {
   const { name } = useParams();
@@ -17,7 +18,10 @@ const CountryDetails = (props) => {
             <p>Back</p>
           </button>
         </div>
-        <div className="items-center grid md:grid-cols-2 md:gap-10 md:items-start px-8 dark:text-white sm:max-w-lg sm:mx-auto md:max-w-none">
+        <div
+          className="grid md:grid-cols-2 md:gap-10 md:items-start px-8 dark:text-white sm:max-w-lg sm:mx-auto md:max-w-none items-center"
+          id="align"
+        >
           <div className="w-full h-full xl:max-w-lg xl:mx-auto xl:max-h-80">
             <img
               src={props.imgSrc}
@@ -32,15 +36,17 @@ const CountryDetails = (props) => {
                 <p>
                   native name:
                   {props.nativeName.map((name) => (
-                    <span className="font-light" key={name.common}>
+                    <span className="font-light" key={name.official}>
                       {" "}
-                      {name.common}
+                      {name.official},
                     </span>
                   ))}
                 </p>
                 <p>
                   population:{" "}
-                  <span className="font-light">{props.population}</span>
+                  <span className="font-light">
+                    {props.population.toLocaleString("en-US")}
+                  </span>
                 </p>
                 <p>
                   region: <span className="font-light">{props.region}</span>
@@ -49,8 +55,14 @@ const CountryDetails = (props) => {
                   sub region:{" "}
                   <span className="font-light">{props.subregion}</span>
                 </p>
-                <p>
-                  capital: <span className="font-light">{props.capital}</span>
+                <p className=" break-words">
+                  capital:{" "}
+                  {props.capital.map((capital) => (
+                    <span className="font-light" key={capital}>
+                      {" "}
+                      {capital}.
+                    </span>
+                  ))}
                 </p>
               </div>
               <div className="[&>p]:capitalize [&>p]:text-sm [&>p]:my-2 [&>p]:font-bold my-8 md:m-0">
@@ -88,9 +100,7 @@ const CountryDetails = (props) => {
               <div className="md:w-[35vw] pb-10">
                 {props.borders?.map((country) => (
                   <a href={`/country/${name}/${country}`} key={country}>
-                    <p
-                      className="bg-white dark:bg-[#2b3945] duration-300 py-1 px-6 shadow-sm text-sm w-fit inline-block mr-2 mt-2 rounded-sm hover:scale-110 hover:shadow-md cursor-pointer"
-                    >
+                    <p className="bg-white dark:bg-[#2b3945] duration-300 py-1 px-6 shadow-sm text-sm w-fit inline-block mr-2 mt-2 rounded-sm hover:scale-110 hover:shadow-md cursor-pointer">
                       {country}
                     </p>
                   </a>
