@@ -28,10 +28,9 @@ const CountryCards = ({ isFetchedAfterMount, loading, error, data, query }) => {
                 <a
                   href={`/country/${data?.name?.common}`}
                   key={data?.name.common}
-                  // className="w-full lg:w-fit"
                 >
                   <div
-                    className="bg-white border-[1px] dark:bg-[#2b3945] dark:text-white hover:rounded-none mt-10 w-full md:w-30 cursor-pointer hover:scale-105 hover:shadow-xl lg:w-[60vw]"
+                    className="bg-white border-[1px] dark:bg-[#2b3945] dark:text-white hover:rounded-none mt-10 w-100% md:w-30 cursor-pointer hover:scale-105 hover:shadow-xl lg:w-[60vw]"
                     key={data?.name.common}
                   >
                     <div className=" h-[200px] xl:w-[300px] lg:w-[450px] md:w-[320px] w-[100%] ">
@@ -41,7 +40,7 @@ const CountryCards = ({ isFetchedAfterMount, loading, error, data, query }) => {
                         className="hover:rounded-none h-full w-full"
                       />
                     </div>
-                    <div className="text-left p-4 lg:w-[20vw]" id="height">
+                    <div className="text-left p-4 md:w-[20vw]" id="height">
                       <h3 className="font-extrabold text-xl my-2">
                         {data?.name.common}
                       </h3>
