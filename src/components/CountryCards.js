@@ -40,7 +40,7 @@ const CountryCards = ({ isFetchedAfterMount, loading, error, data, query }) => {
                         className="hover:rounded-none h-full w-full"
                       />
                     </div>
-                    <div className="text-left p-4 md:w-[20vw]" id="height">
+                    <div className="text-left p-4" id="height">
                       <h3 className="font-extrabold text-xl my-2">
                         {data?.name.common}
                       </h3>

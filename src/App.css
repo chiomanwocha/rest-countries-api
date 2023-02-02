@@ -14,7 +14,8 @@
 }
 
 #height {
-  min-height: 21vh
+  height: 22vh;
+  width: 300px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

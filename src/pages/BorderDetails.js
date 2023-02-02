@@ -26,7 +26,6 @@ const BorderDetails = () => {
       setNativeName(Object.values(data.data[0].name.nativeName));
     },
   });
-
   return (
     <div>
       {status === "loading" || isFetching ? (

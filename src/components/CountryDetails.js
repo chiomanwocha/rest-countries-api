@@ -5,7 +5,7 @@ import "../App.css";
 const CountryDetails = (props) => {
   const { name } = useParams();
   const navigate = useNavigate();
-
+  
   return (
     <div className="relative pt-8 w-full dark:bg-[#1F2D36] bg-[#FAFAFA] md:h-screen">
       <div>
